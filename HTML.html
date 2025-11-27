@@ -1,0 +1,228 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>python html-css</title>
+    <link rel="stylesheet" href="dizayner.css">
+</head>
+<body>
+<div class="tepa">
+    <p class="sar">PYTHON HTML-CSS</p>
+
+    <div class="menu">
+        <a href="index5.html">
+            <button class="home">HOME</button>
+        </a>
+       <a href="pyton.html">
+         <button class="py">PYTHON</button>
+       </a>
+        <a href="HTML.html">
+            <button class="html">HTML</button>
+        </a>
+        <a href="css.html">
+            <button class="css">CSS</button>
+        </a>
+        <a href="sozlam.html">
+            <button class="sozlamalar">≡</button>
+        </a>
+    </div>
+</div>
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Darslarim</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+    
+        #addBtn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 32px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+            cursor: pointer;
+            z-index: 1000;
+            transition: all 0.3s;
+        }
+        #addBtn:hover {
+            transform: scale(1.1);
+            background: #45a049;
+        }
+
+        /* Modal oyna */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.6);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background: white;
+            width: 90%;
+            max-width: 600px;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            position: relative;
+            animation: modalOpen 0.4s;
+        }
+        @keyframes modalOpen {
+            from {transform: scale(0.7); opacity: 0;}
+            to {transform: scale(1); opacity: 1;}
+        }
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 32px;
+            cursor: pointer;
+            color: #aaa;
+        }
+        .close:hover {color: #f44336;}
+
+        /* Kartalar gridda */
+        #natijalar {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            max-width: 1400px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+        .note {
+            transition: all 0.3s;
+        }
+        .note:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+
+        /* Mobil uchun */
+        @media (max-width: 992px) {
+            #natijalar { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 600px) {
+            #natijalar { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+
+
+    <input type="text" id="search" placeholder="Qidiruv...">
+    <!-- NATIJALAR GRID -->
+    <div id="natijalar"></div>
+    <!-- + TUGMASI -->
+    <button id="addBtn" onclick="modalOchish()">+</button>
+    <!-- MODAL OYNA -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="modalYopish()">&times;</span>
+            <h2 style="text-align:center; margin-bottom:20px;">Yangi mavzu qo‘shish</h2>
+            <input type="text" id="yangiMavzu" placeholder="Mavzu nomi (masalan: for loop)">
+            <textarea id="yangiMatn" rows="7" placeholder="Qisqacha tushuncha yozing..."></textarea>
+            <div style="text-align:center; margin-top:20px;">
+                <button class="qosh" onclick="malumotQoshish(); modalYopish();">Qo‘shish</button>
+                <button style="background:#999;" onclick="modalYopish()">Bekor qilish</button>
+            </div>
+        </div>
+    </div>
+
+<script>
+// BO‘LIM NOMI (faqat shuni o‘zgartiring)
+const bolim = 'html';  // html.html → 'html', css.html → 'css'
+
+let eslatmalar = JSON.parse(localStorage.getItem(bolim + '_eslatmalar')) || [];
+
+function korsatish(qidiruv = '') {
+    const con = document.getElementById('natijalar');
+    con.innerHTML = '';
+    let tartiblangan = eslatmalar.slice().sort((a,b) => b.vaqt - a.vaqt);
+
+    tartiblangan.forEach((item, index) => {
+        if (qidiruv === '' || item.mavzu.toLowerCase().includes(qidiruv) || item.matn.toLowerCase().includes(qidiruv)) {
+            con.innerHTML += `
+                <div class="note">
+                    <h3>${item.mavzu}</h3>
+                    <p>${item.matn.replace(/\n/g, '<br>')}</p>
+                    <small>${new Date(item.vaqt).toLocaleString('uz-UZ')}</small>
+                    <div style="margin-top:15px;">
+                        <button class="tahrir" onclick="tahrirlash(${index})">Tahrirlash</button>
+                        <button class="ochir" onclick="ochirish(${index})">O‘chirish</button>
+                    </div>
+                </div>`;
+        }
+    });
+}
+
+function malumotQoshish() {
+    let mavzu = document.getElementById('yangiMavzu').value.trim();
+    let matn  = document.getElementById('yangiMatn').value.trim();
+    if (mavzu && matn) {
+        eslatmalar.push({mavzu, matn, vaqt: Date.now()});
+        localStorage.setItem(bolim + '_eslatmalar', JSON.stringify(eslatmalar));
+        document.getElementById('yangiMavzu').value = '';
+        document.getElementById('yangiMatn').value = '';
+        korsatish(document.getElementById('search').value.toLowerCase());
+    } else {
+        alert("Ikkalasi ham to‘ldirilishi shart!");
+    }
+}
+
+function tahrirlash(i) {
+    let m = prompt("Yangi mavzu:", eslatmalar[i].mavzu);
+    let t = prompt("Yangi matn:", eslatmalar[i].matn);
+    if (m !== null && t !== null) {
+        eslatmalar[i].mavzu = m.trim() || eslatmalar[i].mavzu;
+        eslatmalar[i].matn = t.trim() || eslatmalar[i].matn;
+        localStorage.setItem(bolim + '_eslatmalar', JSON.stringify(eslatmalar));
+        korsatish(document.getElementById('search').value.toLowerCase());
+    }
+}
+
+function ochirish(i) {
+    if (confirm("Rostan o‘chirasizmi?")) {
+        eslatmalar.splice(i, 1);
+        localStorage.setItem(bolim + '_eslatmalar', JSON.stringify(eslatmalar));
+        korsatish(document.getElementById('search').value.toLowerCase());
+    }
+}
+
+// Modal ochish/yopish
+function modalOchish() {
+    document.getElementById('modal').style.display = 'flex';
+    document.getElementById('yangiMavzu').focus();
+}
+function modalYopish() {
+    document.getElementById('modal').style.display = 'none';
+}
+
+// ESC tugmasi bilan yopish
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') modalYopish();
+});
+
+// Qidiruv
+document.getElementById('search').addEventListener('input', function() {
+    korsatish(this.value.toLowerCase());
+});
+
+// Sahifa yuklanganda
+korsatish();
+</script>
+
+</body>
+</html>

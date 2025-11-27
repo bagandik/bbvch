@@ -1,0 +1,432 @@
+.box{
+    background-color: rgb(255, 255, 255);
+    width: 600px;
+    height: 750px;
+    position: absolute;
+    top: 100px;
+    left: 440px;
+    border-radius: 20px; 
+
+    
+}
+body{
+    background-color: #89b4ff;
+}
+.ism{
+    position: absolute;
+    top: 300px;
+    left: 515px; 
+    background-color: rgb(191, 214, 255);
+    border: red;
+    height: 50px;
+    width: 450px;
+    border: 10px;
+    font-size: 20px;
+    border-color: rgb(0, 0, 0);
+    border-radius: 10px;
+
+    
+}
+.ism1{
+    position: absolute;
+    top: 246px;
+    left: 530px; 
+    font-size: 25px
+
+}
+.family{
+    position: absolute;
+    top: 420px;
+    left: 515px; 
+    background-color: rgb(191, 214, 255);
+    border: red;
+    height: 50px;
+    width: 450px;
+    border: 10px;
+    font-size: 20px;
+    border-color: rgb(0, 0, 0);
+    border-radius: 10px;    
+}
+.fam{
+    position: absolute;
+    top: 365px;
+    left: 530px; 
+    font-size: 25px
+
+}
+.box3{
+    position: absolute;
+    top: 550px;
+    left: 515px;
+    height: 50px;
+    width: 450px; 
+    background-color:  #5291ff;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 15px
+    
+}   
+.sarlavha{
+    position: absolute;
+    top: 180px;
+    left: 520px;
+    font-size: 20px;
+}
+.tep{
+    width: 1439px;
+    height: 50px;
+    background-color: #5291ff   ;
+    position: absolute;
+    top: -1px;
+    left: 0px;
+}
+.tepa{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 65px;
+    background-color: slategrey;
+    z-index: 9999;
+}
+
+.home{
+    position: absolute;
+    top: 12%;
+    left: 45%;
+    width: 80px;
+    height: 47px;
+   background-color: slategrey;
+    border: none;
+    color: white;
+    z-index: 999;
+    cursor: pointer;
+    font-size: 110%;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+.home:hover{
+    background-color: rgba(137, 151, 166, 0.979);
+
+}
+.sar{
+    position: absolute;
+    top: 0.1%; 
+    left: 10px;
+    font-size: 123%;
+    color: white;
+    z-index: 999;
+
+    }
+    .py{
+    position: absolute;
+    top: 11%;
+    left: 57%;
+    width: 80px;
+    height: 47px;
+   background-color: slategrey;
+    border: none;
+    color: white; 
+    z-index: 999;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 110%;
+    transition: background-color 0.3s;
+    
+}
+.py:hover{
+    background-color: rgba(137, 151, 166, 0.979);
+}
+
+.html{
+    position: absolute;
+    top: 11%;
+    left: 70%;
+    width: 80px;
+    height: 47px;
+   background-color: slategrey;
+    border: none;
+    color: white; 
+    z-index: 999;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 110%;
+    transition: background-color 0.3s;
+    
+}
+.html:hover{
+    background-color: rgba(137, 151, 166, 0.979);
+}
+.css{
+    position: absolute;
+    top: 11%;
+    left: 80%;
+    width: 80px;
+    height: 47px;
+   background-color: slategrey;
+    border: none;
+    color: white; 
+    z-index: 999;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 110%;
+    transition: background-color 0.3s;
+    
+}
+.css:hover{
+    background-color: rgba(137, 151, 166, 0.979);
+}
+.sozlamalar{
+    position: absolute;
+    top: 11%;
+    left: 90%;
+    width: 80px;
+    height: 47px;
+   background-color: slategrey;
+    border: none;
+    color: white; 
+    z-index: 999;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 170%;
+    transition: background-color 0.3s;
+    
+}
+.sozlamalar:hover{
+    background-color: rgba(137, 151, 166, 0.979);
+}
+
+.SAR{
+    position: absolute;
+    top: 35%;
+    left: 35%;
+    font-size: 250%;
+    color: rgb(255, 255, 255);
+    z-index: 1;
+}
+.box5{
+    width: 95%;
+    height: 48%;
+    position: absolute;
+    top: 34%;
+    left: 2.2%;
+    background-color:steelblue;
+    border-radius: 15px;
+    transition: 0.2x;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+    transition: background-color 0.1s;
+}
+.box5:hover{
+    background-color: #516686;
+}
+
+
+
+.box5 iframe{
+    position: absolute;
+    top: 25%;
+    left: 5%;
+    border-radius: 20px;
+} 
+.title{
+    position: absolute;
+    top:73%;
+    left: 7%;
+    color: white;
+}
+.html1{
+    border-radius: 20px;
+    position: absolute;
+    top: 45.9%;
+    left: 36%;
+    height: 24%;
+    width: 26%
+    
+}
+.HTML1{
+    position: absolute;
+    top:69%;
+    left: 38%;
+    color: rgb(255, 255, 255);
+}
+.html2{
+          position: absolute;
+    top:45.9%;
+    left: 66.4%;
+    color: white;
+    border-radius: 20px;
+}
+.css2{
+    position: absolute;
+    top:69%;
+    left: 70%;
+    color: white;
+}
+.box10{
+ background-color: rgba(250, 250, 210, 0.71);
+    width: 100%;
+    height: 27%;
+    position: absolute;
+    top: 7%;
+    right: 0.1%;
+    border-radius: 20px; 
+}
+.TIT{
+    font-size: 300%;
+    text-align: center;
+font-family: "Oswald", sans-serif;
+
+}
+.nega{
+    position: absolute;
+    top: 49%;    
+    left: 31%;
+    font-size: 180%;
+     font-weight: bold;
+}
+.py2{
+    background-color: #516686;
+    width: 8%;
+    height: 50px;
+    position: absolute;
+    top: 95%;
+    left: 0.5%;
+    font-size: 120%;
+    border-radius: 10px;
+}
+.P{
+    font-size: 110%;
+    position: absolute;
+    top: -6px;
+    color: white;
+    left: 12%;
+}
+
+.SAR1{
+    position: absolute;
+    top: 82%;
+    left: 38%;
+    font-size: 250%;
+    color: rgb(255, 255, 255);
+}
+.qidiruvp{
+    border: none;
+    font-size: 25px;
+    position: absolute;
+    top: 12%;
+    left: 36%;
+    width: 20%;
+    height: 4%;
+    border-radius: 100px
+    
+    
+}
+body {
+    font-family: Arial, sans-serif;
+    background: #a0d8ef;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+}
+#search {
+    position: absolute;
+    top: 50px;
+    left: 400px;
+    width: 70%;
+    max-width: 500px;
+    padding: 14px 20px;
+    font-size: 16px;
+    border-radius: 30px;
+    border: none;
+    display: block;
+    margin: 25px auto;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    outline: none;
+    transition: all 0.3s;
+}
+
+#search:focus {
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    transform: scale(1.02);
+}
+
+/* ====================== FORMA VA KARTALAR ====================== */
+.form, .note {
+    
+    background: rgba(255, 255, 255, 0.521);
+    max-width: 700px;
+    margin: 25px auto;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+/* Input va textarea */
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Tugmalar */
+button {
+    padding: 12px 24px;
+    margin: 8px 5px 0 0;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    transition: all 0.3s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
+/* Tugma ranglari */
+.qosh   { background: #4CAF50; }
+.qosh:hover { background: #45a049; }
+
+.tahrir { background: #ff9800; }
+.tahrir:hover { background: #e68900; }
+
+.ochir  { background: #f44336; }
+.ochir:hover { background: #d32f2f; }
+.note h3 {
+    margin: 0 0 12px;
+    color: #0066cc;
+    font-size: 1.5em;
+}
+
+.note p {
+    margin: 10px 0;
+    color: #333;
+}
+
+.note small {
+    color: #888;
+    font-size: 13px;
+    display: block;
+    margin-top: 15px;
+}
+
+/* Mobil uchun */
+@media (max-width: 600px) {
+    nav a { margin: 0 10px; font-size: 16px; }
+    #search { width: 90%; }
+    .form, .note { padding: 15px; }
+}
