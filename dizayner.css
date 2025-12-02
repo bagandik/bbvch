@@ -429,4 +429,41 @@ button:hover {
     nav a { margin: 0 10px; font-size: 16px; }
     #search { width: 90%; }
     .form, .note { padding: 15px; }
+
+}
+
+.SATIR{
+    position: absolute;
+    left: 30%;
+    top: -0%;
+    
+}
+.rasm{
+    width: 30%;
+    height: 30%;
+    position: relative;
+    top: 100px;
+}
+
+.malumot{
+    position: absolute;
+    left: 600px;
+    top: 100px;
+}
+
+.tg{
+    background-color: #0066cc;
+    position: absolute;
+    top: 100%;
+    right: 70%;
+    height: 50%;
+    width: 40%;
+}
+
+.isn{
+    background-color: darkorange;
+    position: absolute;
+    top: 24.6%;
+    right: 35%;
+    height: 6%;
 }
